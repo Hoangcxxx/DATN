@@ -1,0 +1,50 @@
+body {
+    background-color: #e9f4fc;
+}
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+.nav-link i {
+    margin-right: 5px;
+}
+.invoice-item {
+    border: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.invoice-item image {
+    border-radius: 5px;
+}
+.invoice-summary {
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.form-check-label {
+    display: inline-block;
+    margin-left: 5px;
+}
+.btn-checkout {
+    background-color: #ff5f5f;
+    border: none;
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-checkout:hover {
+    background-color: #ff3f3f;
+}
+.vertical-divider {
+    border-left: 2px solid #333;
+    height: 100%;
+}

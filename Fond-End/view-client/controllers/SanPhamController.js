@@ -1,0 +1,3 @@
+window.SanphamController = function ($scope) {
+    
+}

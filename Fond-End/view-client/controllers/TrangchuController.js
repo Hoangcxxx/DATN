@@ -1,0 +1,2 @@
+window.TrangchuController = function ($scope) {
+}

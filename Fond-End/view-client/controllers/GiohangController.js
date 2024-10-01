@@ -1,0 +1,4 @@
+window.GiohangController = function ($scope) {
+
+}
+

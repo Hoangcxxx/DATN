@@ -1,0 +1,183 @@
+<main class="content">
+    <div class="section active">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <h1 class="page-title">Bán hàng tại quầy</h1>
+
+            <div class="container-fluid my-4">
+                <!-- Invoice and Cart Section -->
+                <div class="row">
+                    <!-- Left Column (Invoice List, Cart, Product List) -->
+                    <div class="col-md-8">
+                        <!-- Invoice List -->
+                        <div id="show-product">
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <div class="table-responsive text-center">
+                                        <table class="table table-hover" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Mã HD</th>
+                                                    <th scope="col">Tên NV</th>
+                                                    <th scope="col">Tên KH</th>
+                                                    <th scope="col">Trạng thái</th>
+                                                    <th scope="col">Ngày Tạo</th>
+                                                    <th scope="col">Thao tác</th>
+                                                    <th scope="col"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="show-user">
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1375345</td>
+                                                    <td>Quản Lý</td>
+                                                    <td>Nguyễn Văn A</td>
+                                                    <td><span class="status-pending">Chưa thanh toán</span></td>
+                                                    <td>2021-12-06</td>
+                                                    <td class="control control-table">
+                                                        <button class="btn-edit" id="edit-account"
+                                                            onclick="editAccount(1375345)"><i
+                                                                class="fa-light fa-pen-to-square"></i></button>
+                                                        <button class="btn-delete" id="delete-account"
+                                                            onclick="deleteAccount(1375345)"><i
+                                                                class="fa-regular fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="show-product">
+                            <h4 class="border-bottom pb-2">Giỏ hàng</h4>
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <div class="table-responsive text-center">
+                                        <table class="table table-hover" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Mã SP</th>
+                                                    <th scope="col">Tên sản phẩm</th>
+                                                    <th scope="col">Số lượng</th>
+                                                    <th scope="col">Đơn Giá</th>
+                                                    <th scope="col">Giảm Giá</th>
+                                                    <th scope="col">Thành Tiền</th>
+                                                    <th scope="col">Trạng Thái</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="show-user">
+                                                <!-- Empty rows or dynamically loaded products -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <button class="btn btn-danger">Xoá</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Product List Section -->
+                        <div id="show-product">
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <div class="table-responsive text-center">
+                                        <table class="table table-hover" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Mã SP</th>
+                                                    <th scope="col">Tên sản phẩm</th>
+                                                    <th scope="col">Thể loại</th>
+                                                    <th scope="col">Chất liệu</th>
+                                                    <th scope="col">Kích thước</th>
+                                                    <th scope="col">Màu sắc</th>
+                                                    <th scope="col">Số lượng</th>
+                                                    <th scope="col">Đơn giá</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="show-user">
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>SP001</td>
+                                                    <td>Áo sơ mi</td>
+                                                    <td>Áo</td>
+                                                    <td>Vải</td>
+                                                    <td>M</td>
+                                                    <td>Đen</td>
+                                                    <td>47</td>
+                                                    <td>2.000 VND</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>SP002</td>
+                                                    <td>Áo sơ mi</td>
+                                                    <td>Áo</td>
+                                                    <td>Da</td>
+                                                    <td>L</td>
+                                                    <td>Đen</td>
+                                                    <td>98</td>
+                                                    <td>2.000 VND</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column (Customer Info and Checkout) -->
+                    <div class="col-md-4">
+                        <h4 class="border-bottom pb-2">Tạo hóa đơn</h4>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label for="tenKH" class="form-label">Tên KH</label>
+                                    <input type="text" class="form-control" id="tenKH" placeholder="Tên khách hàng">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="sdt" class="form-label">SĐT</label>
+                                    <input type="text" class="form-control" id="sdt" placeholder="Số điện thoại">
+                                </div>
+
+                                <!-- Payment Details -->
+                                <div class="mb-3">
+                                    <label for="totalPrice" class="form-label">Tổng tiền hàng</label>
+                                    <input type="text" class="form-control" id="totalPrice" placeholder="0" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="amountDue" class="form-label">Khách cần trả</label>
+                                    <input type="text" class="form-control" id="amountDue" placeholder="0" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="paymentMethod" class="form-label">HT Thanh toán</label>
+                                    <select class="form-select" id="paymentMethod">
+                                        <option value="Tiền mặt">Tiền mặt</option>
+                                        <option value="Thẻ tín dụng">Thẻ tín dụng</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="customerPaid" class="form-label">Tiền khách đưa</label>
+                                    <input type="text" class="form-control" id="customerPaid" placeholder="0">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="changeDue" class="form-label">Tiền thừa</label>
+                                    <input type="text" class="form-control" id="changeDue" placeholder="0" readonly>
+                                </div>
+
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-success">Thanh toán</button>
+                                    <button class="btn btn-primary">Tạo hóa đơn</button>
+                                    <button class="btn btn-danger">Hủy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

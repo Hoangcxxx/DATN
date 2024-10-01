@@ -1,0 +1,153 @@
+<!-- Modal Thêm Sản Phẩm -->
+<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addProductModalLabel">Thêm Sản Phẩm</h5>
+                <button class="modal-close product-form" data-dismiss="modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="productForm">
+                    <div class="form-group">
+                        <label for="ten_san_pham">Tên Sản Phẩm:</label>
+                        <input type="text" class="form-control" id="ten_san_pham" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="so_luong_ton">Số Lượng Tồn:</label>
+                        <input type="number" class="form-control" id="so_luong_ton" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gia_ban">Giá Bán:</label>
+                        <input type="number" class="form-control" id="gia_ban" step="0.01" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chat_lieu">Chất Liệu:</label>
+                        <select class="form-control" id="chat_lieu" required>
+                            <option value="">Chọn Chất Liệu</option>
+                            <!-- Options sẽ được thêm bằng JavaScript -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mau_sac">Màu Sắc:</label>
+                        <select class="form-control" id="mau_sac" required>
+                            <option value="">Chọn Màu Sắc</option>
+                            <!-- Options sẽ được thêm bằng JavaScript -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kich_thuoc">Kích Thước:</label>
+                        <select class="form-control" id="kich_thuoc" required>
+                            <option value="">Chọn Kích Thước</option>
+                            <!-- Options sẽ được thêm bằng JavaScript -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mo_ta">Mô Tả:</label>
+                        <textarea class="form-control" id="mo_ta"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Thêm Sản Phẩm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Thêm Màu Sắc -->
+<div class="modal fade" id="addMauSacModal" tabindex="-1" role="dialog" aria-labelledby="addMauSacModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addMauSacModalLabel">Thêm Màu Sắc</h5>
+                <button class="modal-close product-form" data-dismiss="modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="productForm">
+                    <div class="form-group">
+                        <label for="ten_mau_sac">Tên Màu Sắc:</label>
+                        <input type="text" class="form-control" id="ten_mau_sac" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mo_ta">Mô Tả:</label>
+                        <textarea class="form-control" id="mo_ta"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Thêm Màu Sắc</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Thêm Chất liệu -->
+<div class="modal fade" id="addChatLieuModal" tabindex="-1" role="dialog" aria-labelledby="addChatLieuModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addChatLieuModalLabel">Thêm Chất liệu</h5>
+                <button class="modal-close product-form" data-dismiss="modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="productForm">
+                    <div class="form-group">
+                        <label for="ten_mau_sac">Tên Chất Liệu:</label>
+                        <input type="text" class="form-control" id="ten_mau_sac" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mo_ta">Mô Tả:</label>
+                        <textarea class="form-control" id="mo_ta"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Thêm Chất Liệu</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Thêm Kích Thước -->
+<div class="modal fade" id="addKichThuocModal" tabindex="-1" role="dialog" aria-labelledby="addKichThuocModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addKichThuocModalLabel">Thêm Kích thước</h5>
+                <button class="modal-close product-form" data-dismiss="modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="productForm">
+                    <div class="form-group">
+                        <label for="ten_mau_sac">Tên Kích thước:</label>
+                        <input type="text" class="form-control" id="ten_mau_sac" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mo_ta">Mô Tả:</label>
+                        <textarea class="form-control" id="mo_ta"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Thêm Kích Thước</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

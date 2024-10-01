@@ -1,0 +1,110 @@
+<!-- Begin Page Content -->
+<main class="content">
+    <div class="section active">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <h1 class="page-title">Danh Sách Sản Phẩm</h1>
+            <div class="admin-control">
+                <div class="admin-control-left">
+                    <select name="the-loai-tk" id="the-loai-tk" onchange="thongKe()">
+                        <option>Tất cả</option>
+                        <option>Món chay</option>
+                        <option>Món mặn</option>
+                        <option>Món lẩu</option>
+                        <option>Món ăn vặt</option>
+                        <option>Món tráng miệng</option>
+                        <option>Nước uống</option>
+                        <option>Món khác</option>
+                    </select>
+                </div>
+                <div class="admin-control-center">
+                    <form action="" class="form-search">
+                        <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
+                        <input id="form-search-tk" type="text" class="form-search-input"
+                            placeholder="Tìm kiếm tên món..." oninput="thongKe()">
+                    </form>
+                </div>
+                <div class="admin-control-right">
+                    <form action="" class="fillter-date">
+                        <div>
+                            <label for="time-start">Từ</label>
+                            <input type="date" class="form-control-date" id="time-start-tk" onchange="thongKe()">
+                        </div>
+                        <div>
+                            <label for="time-end">Đến</label>
+                            <input type="date" class="form-control-date" id="time-end-tk" onchange="thongKe()">
+                        </div>
+                    </form>
+                    <button class="btn-reset-order" onclick="thongKe(1)"><i
+                            class="fa-regular fa-arrow-up-short-wide"></i></button>
+                    <button class="btn-reset-order" onclick="thongKe(2)"><i
+                            class="fa-regular fa-arrow-down-wide-short"></i></button>
+                    <button class="btn-reset-order" onclick="thongKe(0)"><i
+                            class="fa-light fa-arrow-rotate-right"></i></button>
+                </div>
+            </div>
+            <div class="order-statistical" id="order-statistical">
+                <div class="order-statistical-item">
+                    <div class="order-statistical-item-content">
+                        <p class="order-statistical-item-content-desc">Sản phẩm được bán ra</p>
+                        <h4 class="order-statistical-item-content-h" id="quantity-product">0</h4>
+                    </div>
+                    <div class="order-statistical-item-icon">
+                        <i class="fa-light fa-tshirt"></i>
+                    </div>
+                </div>
+                <div class="order-statistical-item">
+                    <div class="order-statistical-item-content">
+                        <p class="order-statistical-item-content-desc">Số lượng bán ra</p>
+                        <h4 class="order-statistical-item-content-h" id="quantity-order">0</h4>
+                    </div>
+                    <div class="order-statistical-item-icon">
+                        <i class="fa-light fa-file-lines"></i>
+                    </div>
+                </div>
+                <div class="order-statistical-item">
+                    <div class="order-statistical-item-content">
+                        <p class="order-statistical-item-content-desc">Doanh thu</p>
+                        <h4 class="order-statistical-item-content-h" id="quantity-sale">0&nbsp;₫</h4>
+                    </div>
+                    <div class="order-statistical-item-icon">
+                        <i class="fa-light fa-dollar-sign"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="show-product">
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <div class="table-responsive text-center">
+                            <table class="table table-hover" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">STT</th>
+                                        <th scope="col">Tên món</th>
+                                        <th scope="col">Số lượng bán</th>
+                                        <th scope="col">Doanh thu</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="show-user">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Áo polo</td>
+                                        <td>150</td>
+                                        <td>3.000.000 VND</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Quần jeans</td>
+                                        <td>100</td>
+                                        <td>1.000.000 VND</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</main>

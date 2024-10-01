@@ -1,0 +1,3 @@
+window.DonHangController = function ($scope) {
+    
+}

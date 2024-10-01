@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='./assets/image/favicon.png' rel='icon' type='image/x-icon' />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="./assets/css/toast-message.css">
+    <link href="./assets/font/font-awesome-pro-v6-6.2.0/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/admin-responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="view-admin/controllers/DonHangController.js"></script>
+    <script src="view-admin/controllers/KhachHangController.js"></script>
+    <script src="view-admin/controllers/SanPhamController.js"></script>
+    <script src="view-admin/controllers/ThongKeController.js"></script>
+    <script src="view-admin/controllers/TrangChuController.js"></script>
+    <script src="view-admin/controllers/BanHangController.js"></script>
+    <script src="view-admin/controllers/ChatLieuController.js"></script>
+    <script src="view-admin/controllers/KichThuocController.js"></script>
+    <script src="view-admin/controllers/MauSacController.js"></script>
+    <title>Quản lý cửa hàng</title>
+</head>
+
+<body id="page-top" ng-app="myApp">
+    <div class="container-fluid" ng-controller="ngController">
+        <div ng-include="'view-admin/layouts/_header.html'"></div>
+        <div ng-include="'view-admin/layouts/_modal.html'"></div>
+    </div>
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when('/', {
+                    templateUrl: 'view-admin/views/trangchu.html',
+                    controller: TrangChuController
+                })
+                .when('/ban_hang', {
+                    templateUrl: 'view-admin/views/banhang.html',
+                    controller: BanHangController
+                })
+                .when('/don_hang', {
+                    templateUrl: 'view-admin/views/donhang.html',
+                    controller: DonHangController
+                })
+                .when('/san_pham', {
+                    templateUrl: 'view-admin/views/sanpham.html',
+                    controller: SanPhamController
+                })
+                .when('/kich_thuoc', {
+                    templateUrl: 'view-admin/views/kichthuoc.html',
+                    controller: KichThuocController
+                })
+                .when('/mau_sac', {
+                    templateUrl: 'view-admin/views/mausac.html',
+                    controller: MauSacController
+                })
+                .when('/chat_lieu', {
+                    templateUrl: 'view-admin/views/chatlieu.html',
+                    controller: ChatLieuController
+                })
+                .when('/khach_hang', {
+                    templateUrl: 'view-admin/views/khachhang.html',
+                    controller: KhachHangController
+                })
+                .when('/thong_ke', {
+                    templateUrl: 'view-admin/views/thongke.html',
+                    controller: ThongKeController
+                })
+                .otherwise({
+                    redirectTo: '/'
+                })
+        });
+        app.controller("ngController", $scope => {
+            $scope.infoUser = undefined
+            // Biến để lưu trữ tab đang hoạt động
+            $scope.activeTab = 'trang_chu'; // Tab mặc định là trang chủ
+
+            // Hàm để thay đổi tab khi người dùng nhấn vào mục
+            $scope.setActiveTab = function (tab) {
+                $scope.activeTab = tab;
+            };
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
