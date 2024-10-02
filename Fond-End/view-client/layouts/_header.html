@@ -1,0 +1,70 @@
+<header>
+    <div class="header-middle">
+        <div class="container">
+            <div class="header-middle-left">
+                <div class="header-logo">
+                    <a href="">
+                        <img src="../../assets/image/favicon1.png" alt="" class="header-logo-image"
+                            style="width: 80px;">
+                    </a>
+                    <div class="hidden-sidebar your-channel">
+                        <img src="assets/image/admin/nb-fasion-title.png" style="height: 18px;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="header-middle-center">
+                <form action="" class="form-search">
+                    <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
+                    <input type="text" class="form-search-input" placeholder="Tìm kiếm món ăn..."
+                        oninput="searchProducts()">
+                    <button class="filter-btn" onclick="closeSearchAdvanced()"><i
+                            class="fa-light fa-filter-list"></i><span>Lọc</span></button>
+                </form>
+            </div>
+            <div class="header-middle-right">
+                <ul class="header-middle-right-list">
+                    <li class="header-middle-right-item dnone open">
+                        <div class="cart-icon-menu">
+                            <i class="fa-light fa-magnifying-glass"></i>
+                        </div>
+                    </li>
+                    <li class="header-middle-right-item close">
+                        <div class="cart-icon-menu">
+                            <i class="fa-light fa-circle-xmark"></i>
+                        </div>
+                    </li>
+                    <li class="header-middle-right-item dropdown open">
+                        <i class="fa-light fa-user"></i>
+                        <div class="auth-container">
+                            <span class="text-dndk">Đăng nhập / Đăng ký</span>
+                            <span class="text-tk">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+                        </div>
+                        <ul class="header-middle-right-menu">
+                            <li>
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#authModal">
+                                    <i class="fa-light fa-right-to-bracket"></i> Đăng nhập
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#authModal">
+                                    <i class="fa-light fa-user-plus"></i> Đăng ký
+                                </button>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="header-middle-right-item open">
+                        <a href="#!gio_hang" class="d-flex text-decoration-none">
+                            <div class="cart-icon-menu">
+                                <i class="fa-light fa-basket-shopping"></i>
+                                <span class="count-product-cart">0</span>
+                            </div>
+                            <span style="color: black;" onclick="openCart()">Giỏ hàng</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+

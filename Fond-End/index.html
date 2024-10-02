@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NB Fasion</title>
+    <link rel="stylesheet" href="view-client/css/home.css">
+    <link rel="stylesheet" href="view-client/css/header.css">
+    <link rel="stylesheet" href="view-client/css/footer.css">
+    <link rel="stylesheet" href="view-client/css/sanphamct.css">
+    <link rel="stylesheet" href="view-client/css/hoadon.css">
+    <link rel="stylesheet" href="view-client/css/thanhtoan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='assets/image/favicon1.png' rel='icon' type='image/x-icon' />
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/home-responsive.css">
+    <link rel="stylesheet" href="assets/css/toast-message.css">
+    <link rel="stylesheet" href="assets/font/font-awesome-pro-v6-6.2.0/css/all.min.css" />
+    <!-- Bootstrap CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="lib/all.min.css">
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="view-client/controllers/GiohangController.js"></script>
+    <script src="view-client/controllers/HoadonController.js"></script>
+    <script src="view-client/controllers/SanPhamController.js"></script>
+    <script src="view-client/controllers/ThanhtoanController.js"></script>
+    <script src="view-client/controllers/TrangchuController.js"></script>
+    <script src="view-client/controllers/LoginController.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container-fluid" ng-controller="ngController">
+        <div ng-include="'view-client/layouts/_header.html'"></div>
+        <div ng-include="'view-client/layouts/_modal.html'"></div>
+        <div ng-view></div>
+        <div ng-include="'view-client/layouts/_footer.html'"></div>
+    </div>
+
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl: "view-client/views/trangchu.html",
+                    controller: TrangchuController
+                })
+                .when("/san_pham", {
+                    templateUrl: "view-client/views/sanpham.html",
+                    controller: SanphamController
+                })
+                .when("/login", {
+                    templateUrl: "view-client/views/login.html",
+                    controller: LoginController
+                })
+                .when("/gio_hang", {
+                    templateUrl: "view-client/views/giohang.html",
+                    controller: GiohangController
+                })
+                .when("/hoa_don", {
+                    templateUrl: "view-client/views/hoadon.html",
+                    controller: HoadonController
+                })
+                .when("/thanh_toan", {
+                    templateUrl: "view-client/views/thanhtoan.html",
+                    controller: ThanhtoanController
+                })
+                .otherwise({
+                    redirectTo: "/"
+                });
+        });
+        app.controller("ngController", function ($scope) {
+            $scope.infoUser = undefined;
+        });
+
+    </script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/initialization.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/checkout.js"></script>
+    <script src="./js/toast-message.js"></script>
+</body>
+
+</html>

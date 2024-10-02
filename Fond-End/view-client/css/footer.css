@@ -1,0 +1,51 @@
+.footer {
+    margin-top: 30px;
+    border-top: none;
+}
+
+.footer h5 {
+    margin-bottom: 20px;
+}
+
+.footer p,
+.footer a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer .social-icons image {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.footer .payment-icons image {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.logo-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-left: auto;
+    border-radius: 50%;
+}
+
+.social-icons i {
+    font-size: 40px;
+    margin-right: 10px;
+    color: #000;
+}
+
+.logo-section {
+    background-color: #F8F1E4;
+}
+.social-icons i {
+    font-size: 30px;
+    margin: 0 15px; 
+    color: green; 
+}
+
+.siuuuuuu{
+    background-color: #F8F1E4;
+}

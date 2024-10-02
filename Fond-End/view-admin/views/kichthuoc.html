@@ -1,0 +1,75 @@
+<!-- Begin Page Content -->
+<main class="content">
+    <div class="section active">
+        <div class="container-fluid">
+            <h1 class="page-title">Quản lý kích thước</h1>
+            <div class="admin-control">
+                <div class="admin-control-left">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                            style="background-color: #f0f0f0; color: #000;">
+                            Tất cả
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#!san_pham">Sản Phẩm</a></li>
+                            <li><a class="dropdown-item" href="#!chat_lieu">Chất liệu</a></li>
+                            <li><a class="dropdown-item" href="#!kich_thuoc">Kích thước</a></li>
+                            <li><a class="dropdown-item" href="#!mau_sac">Màu sắc</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="admin-control-center">
+                    <form action="" class="form-search">
+                        <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
+                        <input id="form-search-product" type="text" class="form-search-input"
+                            placeholder="Tìm kiếm kích thước..." oninput="showProduct()">
+                    </form>
+                </div>
+
+                <div class="admin-control-right">
+                    <button class="btn-control-large" id="btn-cancel-product" onclick="hienThiModalThemSanPham()"><i
+                            class="fa-light fa-rotate-right"></i> Làm mới</button>
+                    <button type="button" class="btn-control-large" data-toggle="modal"
+                        data-target="#addKichThuocModal">
+                        <i class="fa-light fa-plus"></i> Thêm kích thước mới
+                    </button>
+                </div>
+            </div>
+            <div id="show-product">
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <div class="table-responsive text-center">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Tên kích thước</th>
+                                        <th scope="col">Mô tả</th>
+                                        <th scope="col">Ngày tạo</th>
+                                        <th scope="col">Ngày cập nhật</th>
+                                        <th scope="col">Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="item in KichThuoc">
+                                        <th scope="row">{{$index + 1}}</th>
+                                        <td>{{item.tenKichThuoc}}</td>
+                                        <td>{{item.moTa}}</td>
+                                        <td>{{item.ngayTao | date:'shortDate'}}</td>
+                                        <td>{{item.ngayCapNhat | date:'shortDate'}}</td>
+                                        <td>
+                                            <a href="#" class="btn btn-warning btn-sm"
+                                                ng-click="chinhSuaKichThuoc(item)">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

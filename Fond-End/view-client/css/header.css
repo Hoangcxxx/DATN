@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #2cd529;
+    padding: 10px 0;
+    position: relative; /* Để submenu có thể được định vị tương đối */
+}
+
+.menu {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    position: relative;
+}
+
+.menu a:hover {
+    color: #cf238d; /* Màu khi hover */
+}
+
+/* Đường viền dưới cố định */
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: transparent; /* Bắt đầu với màu trong suốt */
+    left: 0;
+    bottom: 0; /* Đường viền nằm ở dưới cùng */
+    transition: background 1s ease; /* Chỉ chuyển màu */
+}
+
+.menu a:hover::after {
+    background: #94ff47; /* Đổi màu khi hover */
+}
+
+/* Submenu Styles */
+.submenu {
+    display: none; /* Ẩn submenu mặc định */
+    position: fixed; /* Định vị cố định */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    top: 242px; /* Cố định cách trên 100px */
+    transform: translateX(-50%); /* Canh giữa theo chiều ngang */
+    width: 90vw; /* Chiều rộng 90% của viewport */
+    height: 500px; /* Chiều cao tự động */
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden; /* Ẩn phần thừa */
+    transition: opacity 2s ease; /* Hiệu ứng mờ */
+    opacity: 0; /* Bắt đầu ẩn */
+    pointer-events: none; /* Không cho chuột tương tác */
+    z-index: 1000; /* Đảm bảo submenu nằm trên các phần tử khác */
+}
+
+.submenu ul {
+    list-style-type: none;
+    padding: 20px; /* Padding cho nội dung */
+    margin: 0;
+}
+
+.submenu li {
+    margin: 10px 0; /* Khoảng cách giữa các item */
+}
+
+.submenu a {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    display: block; /* Hiển thị thành khối */
+}
+
+.menu li:hover .submenu {
+    display: block; /* Hiển thị submenu khi hover vào item cha */
+    opacity: 1; /* Hiển thị */
+    pointer-events: auto; /* Cho phép tương tác */
+}

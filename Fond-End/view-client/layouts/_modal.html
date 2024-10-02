@@ -1,0 +1,135 @@
+<!-- Modal Thông tin sản phẩm -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header d-flex align-items-center">
+        <h5 class="modal-title" id="exampleModalLabel">Thông tin chi tiết sản phẩm</h5>
+        <button type="button" class="btn btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fas fa-circle-xmark" style="font-size: 30px;"></i>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="./assets/img/products/ao-thun-nam.jpeg" alt="Áo thun nam" class="img-fluid product-image">
+        <h2 class="product-title mt-3">Áo thun nam cổ tròn</h2>
+        <div class="product-control">
+          <div class="priceBox">
+            <span class="current-price">250.000&nbsp;₫</span>
+          </div>
+          <div class="buttons_added">
+            <input class="minus is-form" type="button" value="-" onclick="decreasingNumber(this)">
+            <input class="input-qty" max="100" min="1" type="number" value="1">
+            <input class="plus is-form" type="button" value="+" onclick="increasingNumber(this)">
+          </div>
+        </div>
+        <p class="product-description mt-2">Áo thun nam cổ tròn, chất liệu cotton mềm mại, thoáng mát, phù hợp cho cả đi
+          chơi và đi làm. Thiết kế đơn giản nhưng trẻ trung, dễ phối đồ với quần jeans hoặc quần short.</p>
+        <div class="notebox mt-3">
+          <p class="notebox-title">Ghi chú</p>
+          <textarea class="text-note" id="popup-detail-note" placeholder="Nhập thông tin cần lưu ý..."
+            rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="price-total">
+          <span class="thanhtien">Thành tiền</span>
+          <span class="price">250.000&nbsp;₫</span>
+        </div>
+        <div class="modal-footer-control">
+          <a href="#!thanh_toan">
+            <button class="button-dathangngay btn btn-success" data-product="1" data-bs-dismiss="modal">Đặt hàng
+              ngay</button>
+          </a>
+          <button class="button-dat btn btn-primary" id="add-cart" onclick="animationCart()" data-bs-dismiss="modal">
+            <i class="fa-light fa-basket-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- The Modal -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title" id="authModalLabel">Đăng nhập</h4>
+        <button class="cart-close" data-bs-dismiss="modal"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="authTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login" role="tab"
+              aria-controls="login" aria-selected="true">Đăng nhập</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="register-tab" data-bs-toggle="tab" href="#register" role="tab"
+              aria-controls="register" aria-selected="false">Đăng ký</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="forgot-password-tab" data-bs-toggle="tab" href="#forgot-password" role="tab"
+              aria-controls="forgot-password" aria-selected="false">Quên mật khẩu</a>
+          </li>
+        </ul>
+
+        <div class="tab-content mt-3" id="authTabContent">
+          <!-- Login Form -->
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <form>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="Nhập email" required>
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Mật khẩu</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Nhập mật khẩu" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Đăng nhập</button>
+            </form>
+          </div>
+
+          <!-- Register Form -->
+          <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+            <form>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="registerEmail" placeholder="Nhập email" required>
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label">Mật khẩu</label>
+                <input type="password" class="form-control" id="registerPassword" placeholder="Nhập mật khẩu" required>
+              </div>
+              <div class="mb-3">
+                <label for="registerConfirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Xác nhận mật khẩu"
+                  required>
+              </div>
+              <button type="submit" class="btn btn-primary">Đăng ký</button>
+            </form>
+          </div>
+
+          <!-- Forgot Password Form -->
+          <div class="tab-pane fade" id="forgot-password" role="tabpanel" aria-labelledby="forgot-password-tab">
+            <form>
+              <div class="mb-3">
+                <label for="forgotPasswordEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="forgotPasswordEmail" placeholder="Nhập email để khôi phục"
+                  required>
+              </div>
+              <button type="submit" class="btn btn-primary">Khôi phục mật khẩu</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>

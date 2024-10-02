@@ -1,0 +1,3 @@
+window.BanHangController = function ($scope) {
+    
+}

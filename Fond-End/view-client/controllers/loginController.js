@@ -1,0 +1,3 @@
+window.LoginController = function ($scope) {
+    
+}

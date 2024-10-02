@@ -1,0 +1,3 @@
+window.ThongKeController = function ($scope) {
+    
+}

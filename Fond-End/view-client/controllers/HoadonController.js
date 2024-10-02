@@ -1,0 +1,3 @@
+window.HoadonController = function ($scope) {
+    
+}
